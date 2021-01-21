@@ -1,0 +1,19 @@
+{
+    "name": "Plita HTML Template",
+    "ver": "1.0",
+    "author": "E.Sukhodolskiy",
+    "tags": [
+        "html",
+        "css",
+        "order",
+        "template"
+    ],
+    "type": "web",
+    "main_lang": "html",
+    "status": "open",
+    "project_color": "#ff9a00",
+    "git_url": "https://github.com/eugene-sukhodolskiy/plita-order",
+    "release_url": "http://plita.kh.ua/",
+    "favicon": "http://plita.kh.ua/favicon.ico",
+    "description": "Build HTML Template"
+}
