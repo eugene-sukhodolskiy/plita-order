@@ -1,0 +1,20 @@
+@join:../layouts/head.html;
+
+	<div id="wrapper">
+
+		<script type="text/javascript" src="/js/script.js"></script>
+		<script type="text/javascript" src="/js/slides.js"></script>
+
+		@join:../layouts/header.html;
+		@join:../layouts/carousel.html;
+
+
+		<div class="side-main full">
+			@join:../layouts/sidebar.html;
+
+			<div class="side-in">
+				@join:../layouts/post/post-t2.html;
+			</div>
+		</div>
+
+@join:../layouts/footer.html;

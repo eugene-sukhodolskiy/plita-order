@@ -1,0 +1,97 @@
+@join:../layouts/head.html;
+
+	<div id="wrapper">
+
+		<script type="text/javascript" src="/js/script.js"></script>
+		<script type="text/javascript" src="/js/slides.js"></script>
+
+		@join:../layouts/header.html;
+		@join:../layouts/carousel.html;
+
+
+		<div class="side-main full">
+			@join:../layouts/sidebar.html;
+
+			<div class="side-in">
+				<div id="allEntries">
+
+					<ul id="uEntriesList" class="allEntriesTable u-ecc--1" page="1">
+						@repeat:9;
+						<li class="phtTdMain uEntryWrap" next="2">
+							<div id="entryID215" class="entryBlock">
+								<span class="uphoto">
+									<span class="photo-title"><a href="#">Гранит Габро</a></span>
+									<span class="photo-block">
+										<span class="ph-wrap">
+											<span class="ph-tc"><img title="Гранитная брусчатка" style="padding:0;border:0;" src="./photos_files/458625034.jpg"></span>
+											<a href="http://plita.kh.ua/_ph/3/458625034.jpg" data-title="Гранитная брусчатка" class="ulightbox ph-link" data-fancybox="ultbx" data-fancybox-group="ultbx" data-url="/photo/vid_trotuarnoj_plitki/granit_gabro/3-0-215" title="Просмотры: 191 | Размеры: 980x735, 667.5Kb">
+												<span class="ph-tc">
+													<span class="ph-data">
+													<span class="ph-date">23 Ноября 2019</span>
+													<span class="ph-descr">Шашка гранитная один из вечных вариантов мощения. Стоимость напрямую зависит от качества обработки шашки. Различают к...</span>
+													<span class="ph-author" href="javascript://" rel="nofollow" onclick="window.open('/index/8-60', 'up60', 'scrollbars=1,top=0,left=0,resizable=1,width=700,height=375'); return false;">plitakhua</span>
+													</span>
+												</span>
+											</a>
+										</span>
+										<span class="ph-details ph-js-details">
+											<span class="phd-views">191</span>
+											<a href="#comments" class="phd-comments"></a>
+											
+											<span class="phd-rating">
+												<span id="entRating215">0.0</span>
+											</span>
+											<span class="phd-dorating">
+												<ul id="uStarRating215" class="uStarRating215 u-star-rating-14" title="Рейтинг: 0.0/0">
+													<li id="uCurStarRating215" class="u-current-rating uCurStarRating215" style="width:0%;"></li>
+													<li class="u-star-li-215"><a href="http://plita.kh.ua/photo/#" onclick="ustarrating('215', 1); return false;" class="u-one-star">1</a></li>
+													<li class="u-star-li-215"><a href="http://plita.kh.ua/photo/#" onclick="ustarrating('215', 2); return false;" class="u-two-stars">2</a></li>
+													<li class="u-star-li-215"><a href="http://plita.kh.ua/photo/#" onclick="ustarrating('215', 3); return false;" class="u-three-stars">3</a></li>
+													<li class="u-star-li-215"><a href="http://plita.kh.ua/photo/#" onclick="ustarrating('215', 4); return false;" class="u-four-stars">4</a></li>
+													<li class="u-star-li-215"><a href="http://plita.kh.ua/photo/#" onclick="ustarrating('215', 5); return false;" class="u-five-stars">5</a></li>
+												</ul>
+											</span>
+										</span>
+									</span>
+								</span>
+							</div>
+						</li>
+						@end;
+					</ul>
+					
+					<script type="text/javascript">
+						function getPhotoVars(){
+							return {
+								currentPage: 1,
+								pageUrlMask: "/photo/"+"0-%p-0-0-0-0-0-%a",
+								photoIds: {"5":null,"10":null,"8":null,"1":[226,225,224,223,222,221,220,219,218,217,216,215],"2":null,"9":null,"4":null,"7":null,"6":null,"3":null},
+								photoUrls: {"1":[[226,"/_ph/3/50913499.jpg"],[225,"/_ph/3/551681818.jpg"],[224,"/_ph/3/391734594.jpg"],[223,"/_ph/3/441714781.jpg"],[222,"/_ph/3/499042722.jpg"],[221,"/_ph/3/550464561.jpg"],[220,"/_ph/3/293480494.jpg"],[219,"/_ph/3/572315813.jpg"],[218,"/_ph/3/320320764.jpg"],[217,"/_ph/3/392693344.jpg"],[216,"/_ph/3/888256855.jpg"],[215,"/_ph/3/458625034.jpg"]],"2":null,"8":null,"9":null,"5":null,"10":null,"6":null,"7":null,"3":null,"4":null}
+							};
+						}
+
+						function checkPhotoPosition(urls,url){
+							var r;
+							$.each(urls,function(p,i){
+
+								if(i){
+									if(i[0][1] == url){
+										r = [-1,p];
+										return;
+									} else if(i[i.length-1][1] == url){
+										r = [1,p];
+										return;
+									}
+								}
+							});
+							return r;
+						}
+
+						window.photo.photoVars = getPhotoVars();
+						</script>
+					
+					@join:../layouts/pag2.html;
+				</div>
+			</div>
+		</div>
+
+@join:../layouts/footer.html;
