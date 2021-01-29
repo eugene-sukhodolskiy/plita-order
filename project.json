@@ -6,7 +6,8 @@
         "html",
         "css",
         "order",
-        "template"
+        "template",
+        "wordpress"
     ],
     "type": "web",
     "main_lang": "html",

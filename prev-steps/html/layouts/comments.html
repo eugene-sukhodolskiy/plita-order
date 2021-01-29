@@ -1,0 +1,244 @@
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td width="60%" height="25"><!--<s5183>-->Всего комментариев<!--</s>-->: <b>0</b></td><td align="right" height="25"></td></tr>
+<tr><td colspan="2">
+			<div id="myGrid" style="display:none;"><img alt="" src="./single-article_files/i3.gif"></div>
+			<script type="text/javascript">
+				function spages(p,link) {
+					document.location.href = atob(link);
+				}
+			</script>
+			<a name="comments"></a>
+			<div id="newEntryT"></div>
+			<div id="allEntries">
+		</div>
+			<div id="newEntryB"></div>
+			<script type="text/javascript">
+				(function() {
+					'use strict';
+					var commentID = ( /comEnt(\d+)/.exec(location.hash) || {} )[1];
+					if( !commentID ) {
+						return window.console && console.info && console.info('comments, goto page', 'no comment id');
+					};
+					var selector = '#comEnt' + commentID;
+					var target = $(selector);
+					if( target.length ) {
+						$('html, body').animate({
+							scrollTop: ( target.eq(0).offset() || { top: 0 } ).top
+						}, 'fast');
+						return window.console && console.info && console.info('comments, goto page', 'found element', selector);
+					};
+					$.get('/index/802', {
+						id: commentID
+					}).then(function(response) {
+						if( !response.page ) {
+							return window.console && console.warn && console.warn('comments, goto page', 'no page within response', response);
+						};
+						spages(response.page);
+						setTimeout(function() {
+							target = $(selector);
+							if( !target.length ) {
+								return window.console && console.warn && console.warn('comments, goto page', 'comment element not found', selector);
+							};
+							$('html, body').animate({
+								scrollTop: ( target.eq(0).offset() || { top: 0 } ).top
+							}, 'fast');
+							return window.console && console.info && console.info('comments, goto page', 'scrolling to', selector);
+						}, 500);
+					}, function(response) {
+						return window.console && console.error && console.error('comments, goto page', response.responseJSON);
+					});
+				})();
+			</script>
+		</td></tr>
+<tr><td colspan="2" align="center"></td></tr>
+<tr><td colspan="2" height="10"></td></tr>
+</tbody></table>
+
+<form name="socail_details" id="socail_details" onsubmit="return false;">
+   <input type="hidden" name="social" value="">
+   <input type="hidden" name="data" value="">
+   <input type="hidden" name="id" value="70">
+   <input type="hidden" name="ssid" value="703145522572010414263">
+</form>
+
+<div id="postFormContent" class="">
+				<form method="post" name="addform" id="acform" action="http://plita.kh.ua/index/" onsubmit="addcom(); return false;"><script>function _dS(a){var b=a.split(''),c=b.pop();return b.map(function(d){var e=d.charCodeAt(0)-c;return String.fromCharCode(32>e?127-(32-e):e)}).join('')}
+var _y8M = _dS('Dqvx}|(|"xmE*pqllmv*(viumE*{w{*(~it}mE*9@>9<<><@=*(7F8');
+	function addcom(f) {
+		if (document.getElementById('addcBut')) {
+			document.getElementById('addcBut').disabled = true;
+		} else {
+			try {document.addform.submit.disabled = true;} catch(e) {}
+		}
+		if (document.getElementById('eMessage')) {
+			document.getElementById('eMessage').innerHTML = '<span style="color:#999"><img src="/.s/img/ma/m/i2.gif" border="0" align="absmiddle" width="13" height="13"> Идет передача данных...</span>';
+		}
+		_uPostForm('acform', {type:'POST', url:'/index/'});
+	}
+document.write(_y8M);</script><input type="hidden" name="sos" value="1861446485"><input type="hidden" name="sos" value="1861446485">
+                <div class="mc-widget">
+                      <script type="text/javascript">
+
+                        var socRedirect = location.protocol + '//' + ('plita.kh.ua' || location.hostname) + location.pathname + location.search + (location.hash && location.hash != '#' ? '#reloadPage,' + location.hash.substr(1) : '#reloadPage,gotoAddCommentForm' );
+                        socRedirect = encodeURIComponent(socRedirect);
+
+                        var providers = {
+                          
+                        };
+
+                        function socialRepost(entry_link, message) {
+                            console.log('Check witch Social network is connected.');
+
+                            var soc_type = jQuery("form#acform input[name='soc_type']").val();
+                            switch (parseInt(soc_type)) {
+                            case 101:
+                                console.log('101');
+                                var newWin = window.open('https://vk.com/share.php?url='+entry_link+'&description='+message+'&noparse=1','window','width=640,height=500,scrollbars=yes,status=yes');
+                              break;
+                            case 102:
+                                console.log('102');
+                                var newWin = window.open('https://www.facebook.com/sharer/sharer.php?u='+entry_link+'&description='+encodeURIComponent(message),'window','width=640,height=500,scrollbars=yes,status=yes');
+                              break;
+                            case 103:
+                                console.log('103');
+
+                              break;
+                            case 104:
+                                console.log('104');
+
+                              break;
+                            case 105:
+                                console.log('105');
+
+                              break;
+                            case 106:
+                                console.log('106');
+
+                              break;
+                            case 107:
+                                console.log('107');
+                                var newWin = window.open('https://twitter.com/intent/tweet?source=webclient&url='+entry_link+'&text='+encodeURIComponent(message)+'&callback=?','window','width=640,height=500,scrollbars=yes,status=yes');
+                              break;
+                            case 108:
+                                console.log('108');
+
+                              break;
+                            case 109:
+                                console.log('109');
+                                var newWin = window.open('https://plusone.google.com/_/+1/confirm?hl=en&url='+entry_link,'window','width=640,height=500,scrollbars=yes,status=yes');
+                              break;
+                            }
+                        }
+
+                        function updateSocialDetails(type) {
+                            console.log('updateSocialDetails');
+                            jQuery.getScript('//sys000.ucoz.net/cgi/uutils.fcg?a=soc_comment_get_data&site=2plita&type='+type, function(){
+                                jQuery("form#socail_details input[name='social']").val(type);
+                                jQuery("form#socail_details input[name=data]").val(data[type]);
+                                jQuery("form#acform input[name=data]").val(data[type]);
+                                _uPostForm('socail_details',{type:'POST',url:'/index/778', data:{'m':'2', 'vi_commID': '', 'catPath': ''}});
+                            });
+                        };
+
+                        function logoutSocial(){
+                            console.log('delete cookie');
+                            delete_msg_cookie();
+                            jQuery.getScript('//sys000.ucoz.net/cgi/uutils.fcg?a=soc_comment_clear_data&site=2plita', function(){window.location.reload();});
+                        }
+
+                        function utf8_to_b64( str ) {
+                            return window.btoa(encodeURIComponent( escape( str )));
+                        }
+
+                        function b64_to_utf8( str ) {
+                            return unescape(decodeURIComponent(window.atob( str )));
+                        }
+
+                        function getCookie(c_name) {
+                            var c_value = " " + document.cookie;
+                            var c_start = c_value.indexOf(" " + c_name + "=");
+                            if (c_start == -1) {
+                                c_value = null;
+                            } else {
+                                c_start = c_value.indexOf("=", c_start) + 1;
+                                var c_end = c_value.indexOf(";", c_start);
+                                if (c_end == -1) {
+                                    c_end = c_value.length;
+                                }
+                                c_value = unescape(c_value.substring(c_start,c_end));
+                            }
+                            return c_value;
+                        }
+
+                        var delete_msg_cookie = function() {
+                            console.log('delete_msg_cookie');
+                            document.cookie = 'msg=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+                        };
+
+                        function preSaveMessage(){
+                            var msg = jQuery("form#acform textarea").val();
+                            if (msg.length > 0) {
+                                document.cookie = "msg="+utf8_to_b64(msg)+";"; //path="+window.location.href+";
+                            }
+                    	};
+
+                        
+
+                       (function() {
+
+                            jQuery(document).ready(function(){
+                                
+																
+                                jQuery(".uf-tooltip a.uf-tt-exit").attr('href','/index/10');
+                                console.log('ready - update details');
+                                console.log('scurrent', window.scurrent);
+                                if (typeof(window.scurrent) != 'undefined' && scurrent > 0 && data[scurrent]) {
+                                    jQuery("#postFormContent").html('<div style="width:100%;text-align:center;padding-top:50px;"><img alt="" src="/.s/img/ma/m/i3.gif" border="0" width="220" height="19" /></div>');
+
+                                    jQuery("form#socail_details input[name=social]").val(scurrent);
+                                    jQuery("form#socail_details input[name=data]").val(data[scurrent]);
+                                    updateSocialDetails(scurrent);
+                                };
+                                jQuery('a#js-ucf-start').on('click', function(event) {
+                                    event.preventDefault();
+                                    if (scurrent == 0) {
+                                        window.open("//sys000.ucoz.net/cgi/uutils.fcg?a=soc_comment_auth",'SocialLoginWnd','width=500,height=350,resizable=yes,titlebar=yes');
+                                    }
+                                });
+                                jQuery('.uauth-small-links a.login-with').on('click', function(event) {
+                                    event.preventDefault();
+                                    var classList = jQuery(this).attr('class').split(' ');
+                                    var social = providers[classList[1]];
+                                    if (typeof(social) != 'undefined' && social.enabled == 1){
+                                        if( social.handler ) {
+                                          social.handler(social);
+                                        } else {;
+                                          //unetLoginWnd
+                                          var newWin = window.open(social.url,"_blank",'width=640,height=500,scrollbars=yes,status=yes');
+                                        }
+                                    }
+                                });
+                            });
+                       })(jQuery);
+                       </script>
+                </div>
+<div class="uForm uComForm">
+	<div class="uauth-small-links uauth-links-set">Войдите: <a href="javascript://" onclick="window.open('https://login.uid.me/?site=2plita&amp;ref='+escape(location.protocol + '//' + ('plita.kh.ua' || location.hostname) + location.pathname + ((location.hash ? ( location.search ? location.search + '&amp;' : '?' ) + 'rnd=' + Date.now() + location.hash : ( location.search || '' )))),'uidLoginWnd','width=580,height=450,resizable=yes,titlebar=yes');return false;" class="login-with uid" title="Войти через uID" rel="nofollow"><i></i></a><a href="javascript:;" onclick="return uSocialLogin('facebook');" data-social="facebook" class="login-with facebook" title="Войти через Facebook" rel="nofollow"><i></i></a><a href="javascript:;" onclick="return uSocialLogin('google');" data-social="google" class="login-with google" title="Войти через Google" rel="nofollow"><i></i></a></div>
+	<div class="uComForm-inner">
+		<span class="ucf-avatar"><img src="./single-article_files/noavatar.png" alt="avatar"></span>
+		<div class="ucf-content ucf-start-content">
+			<ul class="uf-form ucf-form">
+				<li><textarea class="uf-txt-input commFl js-start-txt" placeholder="Оставьте ваш комментарий..."></textarea>
+				</li><li><button class="uf-btn" onclick="preSaveMessage(); window.open('/index/800?ref='+window.location.href, 'SocialLoginWnd', 'width=500,height=410,resizable=yes,titlebar=yes');">Отправить</button>
+			</li></ul>
+		</div>
+	</div>
+</div><input type="hidden" name="ssid" value="703145522572010414263">
+			<input type="hidden" name="a" value="36">
+			<input type="hidden" name="m" value="2">
+			<input type="hidden" name="id" value="70">
+			
+			<input type="hidden" name="soc_type" id="csoc_type">
+			<input type="hidden" name="data" id="cdata">
+		</form>
+	</div>
