@@ -629,3 +629,12 @@ ul.b-nav li a:hover {
 .pagesBlockuz2 a:hover {
  background:#269b68;
 }
+
+.excerpt > *{
+	display: none;
+}
+
+.excerpt figure:first-of-type,
+.excerpt p:first-of-type{
+	display: block;
+}

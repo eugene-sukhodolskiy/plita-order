@@ -40,7 +40,6 @@ class Theme{
 		// 	) );
 		// } );
 
-		$this -> register_magicman_type = new RegisterMagicmanType();
 		$this -> ajax_controller = new AjaxController();
 	}
 }

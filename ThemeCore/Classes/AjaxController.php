@@ -21,8 +21,6 @@ class AjaxController{
 
 	public function custom_search(){
 		$search_str = trim(strip_tags($_POST['search']));
-		$query = new \WP_Query("s={$search_str}&post_type=magicman&numberposts=4");
-		$posts = ['posts' => $query -> posts];
 		$query = new \WP_Query("s={$search_str}&post_type=post&numberposts=4");
 		$posts['posts'] = array_merge($posts['posts'], $query -> posts);
 
