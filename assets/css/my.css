@@ -520,6 +520,7 @@ ul.b-nav li a:hover {
  width:225px;
  height:139px;
  padding:7px 0 0 8px;
+ object-fit: cover;
 }
 
 .viewn a.viewn-link {
@@ -637,4 +638,44 @@ ul.b-nav li a:hover {
 .excerpt figure:first-of-type,
 .excerpt p:first-of-type{
 	display: block;
+}
+
+.nav-links{
+	font-size: 16px;
+}
+
+.comment-form-url{
+	display: none;
+}
+
+.form-submit .submit{
+  background: #32c182;
+  color: #333333;
+  text-shadow: none;
+  display: block;
+  height: 28px;
+  line-height: 28px;
+  text-decoration: none;
+  padding: 0 15px;
+  text-transform: uppercase;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+  border: 0;
+}
+
+.form-submit .submit:hover{
+	background: #333333;
+	color: #d1d3c6;
+}
+
+#wp-comment-cookies-consent{
+  position: relative;
+  top: 2px;
+  left: -2px;
+}
+
+.comment-form-comment textarea{
+	display: block;
+  width: calc(100% - 10px);
 }

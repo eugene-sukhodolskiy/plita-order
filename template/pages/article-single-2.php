@@ -20,6 +20,7 @@
 					<?= $post -> post_content ?>
 				</div>
 			</div>
+			<?= $this -> join('layouts/comments') ?>
 		</div>
 
 	</div>

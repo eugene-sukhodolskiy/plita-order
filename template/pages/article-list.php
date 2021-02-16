@@ -15,7 +15,7 @@
 		<? endforeach ?>
 		
 
-		<?= $this -> join('layouts/pagination') ?>
+		<?= $this -> join('layouts/pagination', ['type' => 2]) ?>
 	</div>
 </div>
 

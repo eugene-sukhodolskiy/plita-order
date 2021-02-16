@@ -3,6 +3,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<? wp_head() ?>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- <title>Укладка тротуарной плитки Харьков цена</title> -->
 
 
@@ -41,6 +42,11 @@
 	</script>
 
 	<link type="text/css" rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/social.css">
+	<link type="text/css" rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/gallery.css">
+	<link type="text/css" rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/adaptive.css">
+	<script src="<?= get_template_directory_uri() ?>/js/custom.js"></script>
+
+	<link rel="icon" type="image/ico" href="/wp-content/themes/plita/assets/images/favicon.ico">
 </head>
 
 <body <?php body_class(); ?>>

@@ -1,20 +1,33 @@
 <?
-	$nav_items = get_navitems('header-nav');			
-	// $current_guid = url_to_postid(get_the_permalink());
+	$nav_items = get_navitems('header-nav');		
+
+	$cpost = get_page_by_path('contacts', OBJECT);
+	$phones = [
+		get_post_meta($cpost -> ID, 'phone_number_1'), 
+		get_post_meta($cpost -> ID, 'phone_number_2')
+	];
+	$location = get_post_meta($cpost -> ID, 'location');
+
 ?>
 
 <div class="header">
 	<div class="full">
-		<a href="/home.html" class="header-logo"></a>
+		<a href="/" class="header-logo"></a>
 		<div class="header-contact">
-			<div>
-				<span style="font-size: 12pt;">+38</span><span style="font-size: 12pt;"><font color="#32c182">(066)</font></span><font style="font-size: 12pt;">-451-69-74</font>
-			</div>
-			<div>
-				<font style="font-size: 12pt;">+38</font><span style="font-size: 12pt;"><font color="#32c182">(063)</font></span><font style="font-size: 12pt;">-426-42-69</font>
-			</div>
-			<div>Украина, г.Харьков, Плитакс©&nbsp;</div>
+			<!-- #32c182 -->
+			<?php foreach ($phones as $key => $phone): ?>
+				<div>
+					<span style="font-size: 12pt;">
+						<?= str_replace(')', ')</span>', str_replace('(', '<span style="color: #32c182">(', $phone[0])) ?>
+					</span>
+				</div>
+			<?php endforeach ?>
+			<div><?= $location[0] ?> Плитакс©</div>
 		</div>
+		<button class="menu">
+			<span class="sandwitch">&#9776;</span>
+			<span class="cross">&times;</span>
+		</button>
 		<? wp_nav_menu( [ 
 			'container_class' => 'header-nav',
 			'theme_location'  => 'header-nav'
