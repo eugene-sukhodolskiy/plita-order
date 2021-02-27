@@ -61,6 +61,10 @@ button.menu:focus{
 }
 
 @media (max-width: 1060px){
+	.slides{
+		display: none;
+	}
+
 	.side-main{
 		background: none;
 	}
@@ -194,11 +198,13 @@ button.menu:focus{
 	.viewn .viewn-screen{
 		background: none;
 		width: 100%;
+		height: auto;
 	}
 
 	.viewn .viewn-screen img{
 		padding: 0;
 		width: 100%;
+		height: auto;
 	}
 
 	.viewn a.viewn-link{

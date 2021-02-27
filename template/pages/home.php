@@ -10,7 +10,7 @@
 				'title' => $p -> post_title,
 				'excerpt' => $p -> post_excerpt,
 				'link' => $link,
-				'thumbnail' => has_post_thumbnail($p) ? get_the_post_thumbnail_url($p, 'thumbnail') : null,
+				'thumbnail' => has_post_thumbnail($p) ? get_the_post_thumbnail_url($p, 'large') : null,
 				'timestamp' => translateMonthName(date('d F Y', strtotime($p -> post_date)))
 			]) ?>
 		<? endforeach ?>
